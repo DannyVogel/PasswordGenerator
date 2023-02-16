@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Karla&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #1C1C1C;
+    --container-color: #1F2937;
+    --main-green-color: #4ADF86;
+    --main-font-color: #ECFDF5;
+}
+
+.light {
+    --container-color: #ECFDF5;
+    --main-font-color: #1F2937;
+}
+
+body {
+    margin: 0;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+    font-family: 'Karla', sans-serif;
+}
+
+#container {
+    position: relative;
+    margin: 70px auto 0 auto;
+    width: 550px;
+    background-color: var(--container-color);
+    padding: 80px 52px;
+    border-radius: 6px;
+    border: 5px solid #ECFDF5;
+}
+
+h1 {
+    color: var(--main-font-color);
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+span {
+    display: block;
+    color: var(--main-green-color);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: var(--main-font-color);
+}
+
+
+#generateBtn {
+    width: 200px;
+    height: 45px;
+    padding: 0 15px;
+    background-color: var(--main-green-color);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    color: var(--main-font-color);
+    margin-bottom: 35px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+#generateBtn:hover {
+    background-color: #56ff9a;
+}
+
+hr {
+    border: 1px solid #2F3E53;
+    margin-bottom: 40px;
+}
+
+.pass_container {
+    width: auto;
+    display: flex;
+    gap: 24px;
+}
+
+.passBox {
+    width: 211px;
+    height: 40px;
+    background: #273549;
+    border-radius: 6px;
+    border: none;
+    color: var(--main-green-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.passBox > p {
+    margin: 0;
+    color: var(--main-green-color);
+}
+
+#toggleDark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    padding: 0 0 3px 0;
+    background-color: var(--main-green-color);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#toggleDark:hover {
+    background-color: #56ff9a;
+}
