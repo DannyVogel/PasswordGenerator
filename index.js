@@ -9,8 +9,8 @@ function renderPasswords() {
 
 function generatePassword() {
     let password = ""
-    
-    for (let i = 0; i < 15; i++) {
+    let passwordLengthChoice = document.getElementById("passwordLength").value
+    for (let i = 0; i < passwordLengthChoice; i++) {
         let randomIndex = Math.floor(Math.random() * characters.length)
         password += characters[randomIndex]
     }
@@ -20,4 +20,9 @@ function generatePassword() {
 
 function toggleDark() {
     document.getElementById("container").classList.toggle("light")
+}
+
+function updateLength() {
+    let passwordLengthChoice = document.getElementById("passwordLength").value
+    document.getElementById("passwordLengthLabel").textContent = "Password length: " + passwordLengthChoice + " characters"
 }

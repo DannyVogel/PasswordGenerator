@@ -53,6 +53,7 @@ p {
 
 
 #generateBtn {
+    display: block;
     width: 200px;
     height: 45px;
     padding: 0 15px;
@@ -62,7 +63,7 @@ p {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     font-size: 16px;
     color: var(--main-font-color);
-    margin-bottom: 35px;
+    margin-bottom: 10px;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
 }
@@ -71,8 +72,28 @@ p {
     background-color: #56ff9a;
 }
 
+#lengthContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}
+
+#passwordLengthLabel {
+    color: var(--main-font-color);
+}
+
+#passwordLength:hover {
+    cursor: pointer;
+}
+
+datalist {
+    background-color: var(--main-green-color);
+}
+
 hr {
     border: 1px solid #2F3E53;
+    margin-top: 35px;
     margin-bottom: 40px;
 }
 

@@ -16,6 +16,19 @@
         <p>Never use an insecure password again.</p>
         
         <button id="generateBtn" onclick="renderPasswords()">Generate passwords</button>
+        <div id="lengthContainer">
+            <label id="passwordLengthLabel" for="passwordLength">Password length: 14 characters </label>
+            <input onchange="updateLength()" type="range" min="8" max="20" name="passwordLength" id="passwordLength" list="markers">
+            <datalist id="markers">
+                <option value="8"></option>
+                <option value="10"></option>
+                <option value="12"></option>
+                <option value="14"></option>
+                <option value="16"></option>
+                <option value="18"></option>
+                <option value="20"></option>
+              </datalist>
+        </div>
         <hr>
         <div class="pass_container">
             <div class="passBox">
