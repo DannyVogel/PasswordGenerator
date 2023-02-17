@@ -75,7 +75,7 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 20px;
+    height: auto;
 }
 
 #lengthContainer > input {
@@ -162,3 +162,33 @@ hr {
 #toggleLight:hover {
     background-color: #56ff9a;
 }
+
+@media screen and (max-width: 550px) {
+    #container {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #smallText {
+        margin-bottom: 20px;
+    }
+
+    #lengthContainer {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    hr {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .pass_container {
+        flex-direction: column;
+    }
+
+  }
