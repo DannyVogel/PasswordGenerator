@@ -48,6 +48,7 @@ function copyPassword(event) {
     }, 1500)
 }
 
-function toggleDark() {
+function toggleLight(event) {
     document.getElementById("container").classList.toggle("light")
+    event.target.innerText = event.target.innerText == "☀️" ? "🌙" : "☀️";
 }
