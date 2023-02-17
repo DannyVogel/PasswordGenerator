@@ -171,7 +171,7 @@ hr {
         align-items: center;
         margin-top: 0px;
         padding: 20px 20px;
-        height: auto;
+        height: 90vh;
     }
     
     h1 {
@@ -179,7 +179,7 @@ hr {
     }
     
     #smallText {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     #lengthContainer {
@@ -187,6 +187,9 @@ hr {
         flex-direction: column;
         margin-bottom: 10px;
     }
+
+    #passwordLengthLabel {
+    margin-bottom: 5px;    }
 
     hr {
         width: 100%;
