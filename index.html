@@ -13,12 +13,13 @@
         <button id="toggleDark" onclick="toggleDark()">🌙</button>
         
         <h1>Generate a <span>random password</span></h1>
-        <p>Never use an insecure password again.</p>
+        <p id="smallText">Never use an insecure password again.</p>
         
         <button id="generateBtn" onclick="renderPasswords()">Generate passwords</button>
+        
         <div id="lengthContainer">
             <label id="passwordLengthLabel" for="passwordLength">Password length: 14 characters </label>
-            <input onchange="updateLength()" type="range" min="8" max="20" name="passwordLength" id="passwordLength" list="markers">
+            <input class="styled-slider" onchange="updatePasswordLength()" type="range" min="8" max="20" name="passwordLength" id="passwordLength" list="markers">
             <datalist id="markers">
                 <option value="8"></option>
                 <option value="10"></option>
@@ -29,15 +30,25 @@
                 <option value="20"></option>
               </datalist>
         </div>
+        
+        <div id="checkbox-container">
+            <label for="checkbox">Exclude:</label>
+            <input name="checkbox" type="checkbox" id="symbolsCheck">Symbols
+            <input name="checkbox" type="checkbox" id="numbersCheck">Numbers
+        </div>
+
         <hr>
+        
         <div class="pass_container">
             <div class="passBox">
-                <p id="password1"></p>
+                <p onclick="copyPassword(event)" id="password1"></p>
             </div>
             <div class="passBox">
-                <p id="password2"></p>
+                <p onclick="copyPassword(event)" id="password2"></p>
             </div>
         </div>
+
+        <p id="passwordCopiedAlert" class="hide">Password copied!</p>
     </div>
 
 </body>
