@@ -21,6 +21,7 @@ body {
     background-color: var(--main-bg-color);
     color: var(--main-font-color);
     font-family: 'Karla', sans-serif;
+    
 }
 
 #container {
@@ -45,13 +46,11 @@ span {
     color: var(--main-green-color);
 }
 
-p {
+#smallText {
     margin-top: 0;
     margin-bottom: 50px;
     color: var(--main-font-color);
 }
-
-
 #generateBtn {
     display: block;
     width: 200px;
@@ -79,6 +78,10 @@ p {
     height: 20px;
 }
 
+#lengthContainer > input {
+    width: 166px;
+}
+
 #passwordLengthLabel {
     color: var(--main-font-color);
 }
@@ -87,8 +90,14 @@ p {
     cursor: pointer;
 }
 
-datalist {
-    background-color: var(--main-green-color);
+#checkbox-container {
+    margin-top: 5px;
+    color: var(--main-font-color);
+    display: flex;
+}
+
+#checkbox-container > label {
+    margin-right: auto;
 }
 
 hr {
@@ -111,13 +120,28 @@ hr {
     border: none;
     color: var(--main-green-color);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .passBox > p {
     margin: 0;
     color: var(--main-green-color);
+    cursor: pointer;
+}
+
+.passBox > p:hover {
+    color:#52ff97
+}
+
+#passwordCopiedAlert {
+    margin: 10px 0 0 0;
+    text-align: center;
+    color: var(--main-green-color);
+}
+
+.hide {
+    visibility: hidden;
 }
 
 #toggleDark {
