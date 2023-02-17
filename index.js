@@ -4,7 +4,6 @@ const symbols = ["~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","="
 
 
 function renderPasswords() {
-    
     document.getElementById("password1").textContent = generatePassword()
     document.getElementById("password2").textContent = generatePassword()
 }
@@ -12,16 +11,14 @@ function renderPasswords() {
 function generatePassword() {
     let excludeSymbols = document.getElementById("symbolsCheck").checked
     let excludeNumbers = document.getElementById("numbersCheck").checked
-    let chosenCharacters = []
+    let chosenCharacters = letters
     
-    if (excludeSymbols && excludeNumbers) {
-        chosenCharacters = letters
-    } else if (excludeNumbers) {
-        chosenCharacters = letters.concat(symbols)
-    } else if (excludeSymbols) {
-        chosenCharacters = letters.concat(numbers)
-    } else {
-        chosenCharacters = letters.concat(numbers, symbols)
+    if (!excludeSymbols) {
+        chosenCharacters = chosenCharacters.concat(symbols)
+    }
+
+    if (!excludeNumbers) {
+        chosenCharacters = chosenCharacters.concat(numbers)
     }
 
     let password = ""
